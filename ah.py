@@ -3,11 +3,11 @@ import requests
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 
-token = '6692855149:AAGuvvpBT2hqdLCpQXev3ETUcW_0OZRtIqc'
+token = '6814267814:AAE_upNmKItOd_E55-rqRFyhekfen8owNcw'
 
 bot = telebot.TeleBot(token)
 
-GROUP_CHAT_ID = -1001900702713
+GROUP_CHAT_ID = -1001654938309
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
@@ -17,7 +17,7 @@ def handle_start(message):
     
     if not is_user_in_group(user_id):
         welcome_text = f"Merhaba {user_name},\n\nBeni Kullanabilmek İçin Destek kanalına Katılman Lazım. Katılıp Tekrar Deneyin!"
-        join_button = InlineKeyboardButton("Kanala Katıl", url="https://t.me/illegalchecker")
+        join_button = InlineKeyboardButton("Kanala Katıl", url="https://t.me/mamaklibirininruhu")
         markup = InlineKeyboardMarkup().add(join_button)
         bot.send_message(user_id, welcome_text, reply_markup=markup)
     else:
